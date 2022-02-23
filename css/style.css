@@ -234,9 +234,9 @@ img {
   line-height: 1.87;
   border: transparent;
 }
+
 .button:hover {
   background-color: #188ce8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Section features-list */
@@ -244,13 +244,19 @@ img {
 .feature-icon {
   width: 70px;
   height: 70px;
-  margin: 25px 100px 25px 100px;
+  /* margin: 25px 100px 25px 100px; */
 }
 
 .feature-icon-list {
   background-color: rgba(245, 244, 250, 1);
   border-radius: 4px;
   margin-bottom: 30px;
+
+  display: flex;
+  width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
 }
 
 .feature-list {
@@ -403,25 +409,30 @@ img {
   margin-left: -30px;
 }
 
-.customers-block {
+.customer-list {
   min-width: 170px;
   height: 92px;
   border: 1px solid rgba(175, 177, 184, 1);
   border-radius: 4px;
   margin-left: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .customers-icon {
   fill: #afb1b8;
 }
 
-.customer-list .customers-icon:hover,
-.customer-list .customers-icon:focus {
+.customer-list:hover .customers-icon,
+.customer-list:focus .customers-icon {
   fill: var(--accent-color);
 }
 
-.customers-block:hover {
+.customer-list:hover {
   border: 1px solid var(--accent-color);
+  cursor: pointer;
 }
 
 /* Footer */
@@ -503,7 +514,7 @@ img {
   border-radius: 4px;
 }
 
-.button-menu-items:hover {
+.service-portfolio:hover {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08);
   border-radius: 4px;
 }
@@ -528,12 +539,19 @@ img {
 .items:hover,
 .items:focus {
   background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.items:hover,
+.items:focus {
+  background-color: var(--accent-color);
   color: var(--primery-white-color);
   cursor: pointer;
 }
 
 .service-portfolio {
   text-decoration: none;
+  display: block;
 }
 
 .service-title {
@@ -544,7 +562,7 @@ img {
 }
 
 .service-text {
-  color: #757575;
+  color: var(--primery-text-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
@@ -617,7 +635,4 @@ img {
 .footer-icons-list {
   display: flex;
   align-items: center;
-}
-.footer-connect {
-  align-items: baseline;
 }
